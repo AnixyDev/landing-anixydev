@@ -172,3 +172,9 @@ footer p {
   color: #ff3366;
 }
 
+.option.selected {
+  background-color: #ff3366;
+  color: white;
+}
+
+
