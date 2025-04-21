@@ -13,10 +13,6 @@ body {
   line-height: 1.6;
   padding: 50px 20px;
 }
-h3 {
-  background-color: #FFFFFF;
-  color: #ff00ff;
-}
 
 /* Sección de contacto */
 .contacto {
@@ -42,6 +38,12 @@ h3 {
 
 .contacto a:hover {
   color: #ff69b4;
+}
+
+h3 {
+  background-color: #FFFFFF;
+  color: #ff00ff;
+  font-size: 1.6rem;
 }
 
 /* Sección de quiz */
