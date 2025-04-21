@@ -30,18 +30,19 @@ function showQuestion() {
     const button = document.createElement("div");
     button.textContent = option;
     button.classList.add("option");
-    button.addEventListener("click", () => selectOption(button, option));
     optionsEl.appendChild(button);
-  });
-}
 
-function selectOption(button, option) {
-  answers[currentQuestion] = option;
-  // Desmarca otras opciones
-  const buttons = optionsEl.querySelectorAll(".option");
-  buttons.forEach(btn => btn.classList.remove("selected"));
-  // Marca la opción elegida
-  button.classList.add("selected");
+    // Evento de selección
+    button.addEventListener("click", () => {
+      // Desmarcar todas
+      const allOptions = document.querySelectorAll(".option");
+      allOptions.forEach(opt => opt.classList.remove("selected"));
+      // Marcar la seleccionada
+      button.classList.add("selected");
+      // Guardar la respuesta
+      answers[currentQuestion] = option;
+    });
+  });
 }
 
 nextBtn.addEventListener("click", () => {
@@ -70,3 +71,4 @@ function showResult() {
 }
 
 showQuestion();
+
