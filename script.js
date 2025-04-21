@@ -30,18 +30,21 @@ function showQuestion() {
     const button = document.createElement("div");
     button.textContent = option;
     button.classList.add("option");
-    button.onclick = () => selectOption(option);
+    button.addEventListener("click", () => selectOption(button, option));
     optionsEl.appendChild(button);
   });
 }
 
-function selectOption(option) {
+function selectOption(button, option) {
   answers[currentQuestion] = option;
-  Array.from(optionsEl.children).forEach(btn => btn.classList.remove("selected"));
-  event.target.classList.add("selected");
+  // Desmarca otras opciones
+  const buttons = optionsEl.querySelectorAll(".option");
+  buttons.forEach(btn => btn.classList.remove("selected"));
+  // Marca la opción elegida
+  button.classList.add("selected");
 }
 
-nextBtn.onclick = () => {
+nextBtn.addEventListener("click", () => {
   if (!answers[currentQuestion]) {
     alert("Elige una opción antes de continuar 😉");
     return;
@@ -52,12 +55,11 @@ nextBtn.onclick = () => {
   } else {
     showResult();
   }
-};
+});
 
 function showResult() {
   document.getElementById("quiz-container").style.display = "none";
 
-  // Lógica básica de resultado según respuestas
   if (answers.includes("Vender productos")) {
     resultEl.textContent = "¡Te conviene un E-commerce!";
   } else if (answers.includes("Escribir artículos")) {
