@@ -1,66 +1,87 @@
-/* Reset de márgenes y padding */
+/* ==============================
+   Variables Globales
+============================== */
+:root {
+  --primary-color: #ff3366;
+  --primary-hover: #ff69b4;
+  --bg-color: #f4f4f9;
+  --text-color: #333;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+/* ==============================
+   Reset Básico
+============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo base */
+/* ==============================
+   Estilo Base
+============================== */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
   padding: 50px 20px;
 }
 
-/* Sección de contacto */
+/* ==============================
+   Encabezados
+============================== */
+h2, h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+/* ==============================
+   Sección de Contacto
+============================== */
 .contacto {
   background-color: #fff;
   padding: 40px 20px;
   margin-bottom: 50px;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contacto h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .contacto a {
   text-decoration: none;
-  color: #ff3366;
+  color: var(--primary-color);
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .contacto a:hover {
-  color: #ff69b4;
+  color: var(--primary-hover);
 }
 
-h3 {
-  background-color: #FFFFFF;
-  color: #ff00ff;
-  font-size: 1.6rem;
-}
-
-/* Sección de quiz */
+/* ==============================
+   Sección Quiz
+============================== */
 .quiz {
   background-color: #fff;
   padding: 40px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
 }
 
-.quiz h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 30px;
-}
-
-/* Contenedor del quiz */
 #quiz-container {
   max-width: 600px;
   margin: 0 auto;
@@ -81,17 +102,25 @@ h3 {
   background-color: #f0f0f0;
   padding: 15px;
   margin-bottom: 10px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.option:hover {
-  background-color: #ff69b4;
+.option:hover,
+.option:focus {
+  background-color: var(--primary-hover);
   color: #fff;
   transform: scale(1.05);
+  outline: none;
 }
 
+.option.selected {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Botón siguiente */
 #next-btn {
   padding: 12px 20px;
   background-color: #333;
@@ -101,17 +130,58 @@ h3 {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 
-#next-btn:hover {
-  background-color: #ff3366;
+#next-btn:hover,
+#next-btn:focus {
+  background-color: var(--primary-color);
+  outline: none;
 }
 
-/* Resultado final */
+/* Resultado */
 #result {
   font-size: 1.2rem;
-  color: #ff3366;
+  color: var(--primary-color);
   font-weight: bold;
   margin-top: 30px;
+  transition: opacity 0.5s ease;
 }
 
+/* ==============================
+   Animaciones
+============================== */
+/* Fade In */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade In + Subida */
+.question-transition {
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accesibilidad general */
+button {
+  font-family: inherit;
+}
