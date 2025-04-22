@@ -56,13 +56,13 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-  color: var(--primary-color);
+  color: #ffffff;
 }
 /* ==============================
    Sección de Contacto
 ============================== */
 .contacto, .quiz, footer {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 40px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -86,7 +86,7 @@ h3 {
 #quiz-container {
   max-width: 600px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 #question {
@@ -140,7 +140,7 @@ h3 {
 
 /* Resultado */
 #result {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: var(--primary-color);
   font-weight: bold;
   margin-top: 30px;
