@@ -115,7 +115,7 @@ h1 , p {
 }
 .option.selected {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: #ff00ff;
 }
 
 /* Botón siguiente */
