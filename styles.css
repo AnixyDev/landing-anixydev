@@ -51,13 +51,11 @@ h2, h3 {
 
 h2 {
   font-size: 2rem;
-  color: var(--text-color);
   text-align: center;
 }
 
 h3 {
   font-size: 1.6rem;
-  color: #ffffff;
 }
 /* ==============================
    Sección de Contacto
