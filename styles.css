@@ -21,11 +21,9 @@
 /*===============================
     Favicon
 =========================*/
-favicon {
+img.favicon {
   border-radius: 50%;
 }
-
-
 /* ==============================
    Estilo Base
 ============================== */
@@ -41,8 +39,6 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
 }
-
-
 /* ==============================
    Encabezados
 ============================== */
@@ -61,7 +57,6 @@ h3 {
   font-size: 1.6rem;
   color: var(--primary-color);
 }
-
 /* ==============================
    Sección de Contacto
 ============================== */
@@ -72,8 +67,6 @@ h3 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
 }
-
-
 .contacto a {
   text-decoration: none;
   color: #000;
