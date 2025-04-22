@@ -18,6 +18,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*Favicon*/
+img.favicon {
+  border-radius: 50%;
+}
+
 
 /* ==============================
    Estilo Base
