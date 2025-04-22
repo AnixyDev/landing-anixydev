@@ -18,8 +18,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*Favicon*/
-img.favicon {
+/*===============================
+    Favicon
+=========================*/
+favicon {
   border-radius: 50%;
 }
 
