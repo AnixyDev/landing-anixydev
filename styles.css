@@ -181,22 +181,5 @@ h3 {
 button {
   font-family: inherit;
 }
-.hero {
-  background-image: url("wordpress.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff;
-  padding: 120px 20px;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-.hero-content {
-  background-color: rgba(0,0,0,0.5);
-  padding: 40px;
-  border-radius: 8px;
-  display: inline-block;
-}
 
 
