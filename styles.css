@@ -23,12 +23,17 @@
    Estilo Base
 ============================== */
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
   line-height: 1.6;
   padding: 50px 20px;
+  min-height: 100vh;
 }
+
 
 /* ==============================
    Encabezados
@@ -52,14 +57,14 @@ h3 {
 /* ==============================
    Sección de Contacto
 ============================== */
-.contacto {
-  background-color: #fff;
+.contacto, .quiz, footer {
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 40px 20px;
-  margin-bottom: 50px;
-  text-align: center;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
+
 
 .contacto a {
   text-decoration: none;
@@ -75,13 +80,6 @@ h3 {
 /* ==============================
    Sección Quiz
 ============================== */
-.quiz {
-  background-color: #fff;
-  padding: 40px 20px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  text-align: center;
-}
 
 #quiz-container {
   max-width: 600px;
