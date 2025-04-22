@@ -108,13 +108,10 @@ h3 {
 }
 
 .option:hover,
-.option:focus {
-  background-color: var(--primary-hover);
-  color: #fff;
-  transform: scale(1.05);
-  outline: none;
+.option:focus-visible {
+  outline: 2px solid #ff3366;
+  background-color: #ffe4ec;
 }
-
 .option.selected {
   background-color: var(--primary-color);
   color: #fff;
